@@ -108,14 +108,6 @@ aws-big-data-analytics-pipeline/
     └── github_upload_checklist.md
 ```
 
-## How to Use This Repository
-
-1. Upload this full folder to the GitHub repository named `aws-big-data-analytics-pipeline`.
-2. Add your real screenshots in the `images/` folder.
-3. Add your original notebook, if available, to the root folder or a `notebooks/` folder.
-4. Keep the CSV result files because they show the final project metrics.
-5. Update the README only if you add more real files.
-
 ## Resume Summary
 
 Designed and executed an AWS EMR and Hive-based big data analytics pipeline for 2008 U.S. flight delay data, identifying top delay contributors across airports, carriers, and delay types. Extended the workflow into a Logistic Regression prediction pipeline by generating a 50,000-row Hive sample, cleaning combined team datasets in Python, and achieving 99.48% model accuracy.
