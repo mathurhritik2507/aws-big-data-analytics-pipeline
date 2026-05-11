@@ -1,0 +1,2 @@
+Model,Accuracy,Precision,Confusion_Matrix,Test_Split
+Logistic Regression,0.99475,0.99947,"[[2092, 1], [20, 1887]]",20% test data
