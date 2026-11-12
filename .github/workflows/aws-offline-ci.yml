@@ -8,6 +8,9 @@ on:
     paths:
       - "tests/**"
       - "data/**"
+      - "sql/**"
+      - "scripts/**"
+      - "README.md"
       - "docs/**"
       - ".github/workflows/aws-offline-ci.yml"
 
