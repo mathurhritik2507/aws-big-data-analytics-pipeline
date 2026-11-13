@@ -111,3 +111,16 @@ aws-big-data-analytics-pipeline/
 ## Resume Summary
 
 Designed and executed an AWS EMR and Hive-based big data analytics pipeline for 2008 U.S. flight delay data, identifying top delay contributors across airports, carriers, and delay types. Extended the workflow into a Logistic Regression prediction pipeline by generating a 50,000-row Hive sample, cleaning combined team datasets in Python, and achieving 99.48% model accuracy.
+<!-- PORTFOLIO-REVIEW-NAV -->
+
+---
+
+### Portfolio review guide
+
+[← GitHub profile](https://github.com/mathurhritik2507) · [All projects](https://github.com/mathurhritik2507/data-science-portfolio) · [LinkedIn](https://www.linkedin.com/in/hritikmathur/)
+
+**Project status:** Educational/portfolio project; consult repository files for executable scope.
+
+**For technical reviewers:** Start with the problem statement, inspect the available source files and dependencies, then follow the documented setup and evaluation instructions. Results based on synthetic data, prototypes, or local demonstrations should not be interpreted as production impact.
+
+**Security:** Do not commit credentials, private datasets, personal information, or production secrets. Please report security issues privately rather than publishing exploit details.
