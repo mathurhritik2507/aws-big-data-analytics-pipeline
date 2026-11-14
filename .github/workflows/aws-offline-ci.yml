@@ -1,0 +1,32 @@
+# Offline validation of checked-in, historical flight-delay report snapshots.
+# No AWS credentials, S3, EMR, Hive, Docker, or paid cloud resources.
+name: AWS pipeline offline artifact checks
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "tests/**"
+      - "data/**"
+      - "sql/**"
+      - "scripts/**"
+      - "README.md"
+      - "docs/**"
+      - ".github/workflows/aws-offline-ci.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  published-artifact-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out the PR code
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run offline standard-library tests
+        run: python -m unittest discover -s tests -v
