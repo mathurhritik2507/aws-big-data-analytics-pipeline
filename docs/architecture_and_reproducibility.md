@@ -46,6 +46,19 @@ python -m unittest discover -s tests -v
   carrier rankings, positive delay totals, arrival/departure reconciliation,
   and arithmetic consistency between the published confusion matrix and
   accuracy/precision.
+- `tests/test_phase1_sql_contract.py` uses synthetic flight rows and SQLite
+  aggregations to check airport/carrier delay logic and reconciliation.
+- `tests/test_phase1_delay_boundaries.py` exercises synthetic boundary cases,
+  including zero and missing delays, cancelled/diverted rows, and airports
+  appearing in both origin and destination roles.
+
+The pull-request workflow `.github/workflows/aws-offline-ci.yml` runs the
+standard-library unittest command above on changes to tests, data, SQL,
+scripts, README, docs, or the workflow itself. Check the run for the **current
+PR head commit** before claiming CI passed: an earlier failed run does not
+supersede a newer successful run, and a successful run for an older commit
+is not proof that a newer commit passed. The SQLite tests validate a local
+analogue of the aggregation rules; they do **not** execute Hive SQL.
 
 These are **artifact consistency tests**. They do not execute Hive, reconstruct
 the underlying flight records, establish the accuracy of the original
