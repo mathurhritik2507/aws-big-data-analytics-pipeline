@@ -47,7 +47,7 @@ def aggregate(rows):
 class Phase1OrderIndependenceTests(unittest.TestCase):
     def test_row_permutation_preserves_all_aggregates(self):
         expected = aggregate(ROWS)
-        self.assertEqual(expected[0], {"JFK": 26.0, "LAX": 0.0})
+        self.assertEqual(expected[0], {"JFK": 14.0, "LAX": 12.0})
         self.assertEqual(expected[1], {"AA": 23.0, "UA": 3.0})
         self.assertEqual(expected[2], 26.0)
         for permutation in (list(reversed(ROWS)), ROWS[2:] + ROWS[:2]):
