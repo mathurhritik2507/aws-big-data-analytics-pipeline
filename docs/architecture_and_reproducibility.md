@@ -51,6 +51,12 @@ python -m unittest discover -s tests -v
 - `tests/test_phase1_delay_boundaries.py` exercises synthetic boundary cases,
   including zero and missing delays, cancelled/diverted rows, and airports
   appearing in both origin and destination roles.
+- `tests/test_phase1_fractional_minutes.py` checks that fractional positive
+  delay minutes survive aggregation and conversion to hours, while cancelled
+  and diverted synthetic rows are excluded.
+- `tests/test_phase1_row_order_invariance.py` checks that reversing or rotating
+  synthetic input rows does not change airport totals, carrier totals, or
+  reconciliation. This tests the SQLite analogue, not the Hive engine.
 
 The pull-request workflow `.github/workflows/aws-offline-ci.yml` runs the
 standard-library unittest command above on changes to tests, data, SQL,
